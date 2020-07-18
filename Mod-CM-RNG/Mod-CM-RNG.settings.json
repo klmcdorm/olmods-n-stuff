@@ -1,0 +1,9 @@
+﻿{
+  "Seed": "12345",
+  "AllowGreatItemSpawns": true,
+  "AllowNormalItemSpawns": true,
+  "AllowRobotItemDrops": true,
+
+  "ArmorDropoffStart": 50,
+  "ArmorDropoffEnd": 100
+}

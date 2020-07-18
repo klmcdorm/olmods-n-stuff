@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+  font-family: 'Calibri';
+  font-size: 100%;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+.row {
+  width: 90vw;
+  margin: 0.5em auto;
+  display: flex;
+}
+.col {
+  flex: 0 0 auto;
+  width: 10em;
+}
+.col2 {
+  flex: 1 1 0px;
+}
+.col2 input[type="text"] {
+  width: 15em;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <h1>Custom Challenge Rules</h1>
+</div>
+
+<div class="row">
+  <div class="col"><label>Seed</label></div>
+  <div class="col2"><input type="text"/></div>
+</div>
+<div class="row">
+  <div class="col"></div>
+  <div class="col2"><label><input type="checkbox"/>Allow super powerup spawns</label></div>
+</div>
+<div class="row">
+  <div class="col"></div>
+  <div class="col2"><label><input type="checkbox"/>Allow normal powerup spawns</label></div>
+</div>
+<div class="row">
+  <div class="col"></div>
+  <div class="col2"><label><input type="checkbox"/>Allow drops from robots</label></div>
+</div>
+<div class="row">
+  <div class="col"><label>Armor Dropoff</label></div>
+  <div class="col2"><label>From </label><input type="text"/><label> kills to </label><input type="text"/></div>
+</div>
+
+
+<div class="row">
+  <h1>Loadout</h1>
+</div>
+<div class="row">
+  <div class="col"></div>
+  <div class="col2"><label><input type="checkbox"/>Use custom loadout</label></div>
+</div>
+
+<div class="row">
+  <h3>Primaries</h3>
+</div>
+<div class="row">
+  <div class="col"><label>Ammo</label></div>
+  <div class="col2"><input type="text"/></div>
+</div>
+<div class="row">
+  <div class="col"><label>Impulse</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-impulse" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-impulse" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-impulse" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-impulse" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-impulse" value="2a"/>Q</label>
+	<label><input type="radio" name="loadout-impulse" value="2b"/>RF</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Cyclone</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-cyclone" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-cyclone" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-cyclone" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-cyclone" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-cyclone" value="2a"/>X4</label>
+	<label><input type="radio" name="loadout-cyclone" value="2b"/>F</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Reflex</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-reflex" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-reflex" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-reflex" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-reflex" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-reflex" value="2a"/>RF</label>
+	<label><input type="radio" name="loadout-reflex" value="2b"/>L</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Crusher</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-crusher" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-crusher" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-crusher" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-crusher" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-crusher" value="2a"/>DX</label>
+	<label><input type="radio" name="loadout-crusher" value="2b"/>AF</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Driller</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-driller" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-driller" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-driller" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-driller" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-driller" value="2a"/>DX</label>
+	<label><input type="radio" name="loadout-driller" value="2b"/>M</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Flak</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-flak" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-flak" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-flak" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-flak" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-flak" value="2a"/>DX</label>
+	<label><input type="radio" name="loadout-flak" value="2b"/>VK</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Thunderbolt</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-thunderbolt" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-thunderbolt" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-thunderbolt" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-thunderbolt" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-thunderbolt" value="2a"/>MX</label>
+	<label><input type="radio" name="loadout-thunderbolt" value="2b"/>RT</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Lancer</label></div>
+  <div class="col2">
+    <label><input type="radio" name="loadout-lancer" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-lancer" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-lancer" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-lancer" value="2a"/>C</label>
+	<label><input type="radio" name="loadout-lancer" value="2b"/>SF</label>
+  </div>
+</div>
+
+<div class="row">
+  <h3>Secondaries</h3>
+</div>
+<div class="row">
+  <div class="col"><label>Falcon</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-falcon" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-falcon" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-falcon" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-falcon" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-falcon" value="2a"/>MX</label>
+	<label><input type="radio" name="loadout-falcon" value="2b"/>T</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Missile Pod</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-missilepod" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-missilepod" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-missilepod" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-missilepod" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-missilepod" value="2a"/>XS</label>
+	<label><input type="radio" name="loadout-missilepod" value="2b"/>ST</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Hunter</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-hunter" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-hunter" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-hunter" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-hunter" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-hunter" value="2a"/>W</label>
+	<label><input type="radio" name="loadout-hunter" value="2b"/>XT</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Creeper</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-creeper" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-creeper" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-creeper" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-creeper" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-creeper" value="2a"/>XS</label>
+	<label><input type="radio" name="loadout-creeper" value="2b"/>ST</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Devastator</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-devastator" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-devastator" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-devastator" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-devastator" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-devastator" value="2a"/>XS</label>
+	<label><input type="radio" name="loadout-devastator" value="2b"/>PT</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Nova</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-nova" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-nova" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-nova" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-nova" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-nova" value="2a"/>XB</label>
+	<label><input type="radio" name="loadout-nova" value="2b"/>CL</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Time Bomb</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-timebomb" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-timebomb" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-timebomb" value="0"/>Base</label>
+	<label><input type="radio" name="loadout-timebomb" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-timebomb" value="2a"/>XS</label>
+	<label><input type="radio" name="loadout-timebomb" value="2b"/>LT</label>
+	<label style="margin-left: 2em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><label>Vortex</label></div>
+  <div class="col2">
+	<label><input type="radio" name="loadout-vortex" value=""/>Locked</label>
+	<label><input type="radio" name="loadout-vortex" value="locked"/>Pickup</label>
+	<label><input type="radio" name="loadout-vortex" value="1"/>Plus</label>
+	<label><input type="radio" name="loadout-vortex" value="2a"/>XG</label>
+	<label><input type="radio" name="loadout-vortex" value="2b"/>LP</label>
+	<label style="margin-left: 5.0em;">Ammo</label><input type="text"/>
+  </div>
+</div>
+
+</body>
+</html>
