@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using Overload;
-using Harmony;
+using HarmonyLib;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Reflection.Emit;
@@ -46,7 +46,7 @@ namespace GameMod
                 switch(state)
                 {
                     default:
-                        if(i.IsLoadStaticField(typeof(ChallengeManager), "ChallengeRobotsDestroyed"))
+                        if(i.LoadsField(AccessTools.Field(typeof(ChallengeManager), "ChallengeRobotsDestroyed")))
                         {
                             state = 1;
                         }
