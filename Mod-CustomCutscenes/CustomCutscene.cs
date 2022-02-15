@@ -46,7 +46,6 @@ namespace GameMod
                         break;
                 }
             }
-            //UnityEngine.Debug.Log("CustomCutscene.Transpiler state=" + state);
         }
 
         public static Transform SearchForChildByName(Transform t, string name)
@@ -94,7 +93,7 @@ namespace GameMod
                     fs = new RawUserFileSystem(Overload.GameplayManager.Level.Mission.FolderPath);
                 }
 
-                // TODO variable path
+                // TODO variable assets path and filename (but where would it be configured?)
                 using (var stream = fs.OpenFileStreamToMemory(System.IO.Path.Combine(System.IO.Path.Combine("cutscenes", OsFolderName()), "assets")))
                 {
                     bundle = AssetBundle.LoadFromStream(stream);
@@ -115,7 +114,7 @@ namespace GameMod
 
                         if (cam != null)
                         {
-                            var uiQuadByName = SearchForChildByName(cam.transform, "ui_quad")?.gameObject;
+                            var uiQuadByName = SearchForChildByName(prefab.transform, "ui_quad")?.gameObject;
                             if (uiQuadByName == null)
                             {
                                 Debug.Log("Adding default UI quad");
@@ -175,13 +174,16 @@ namespace GameMod
         public static GameObject AddUiQuad(GameObject camera)
         {
             var scale = new GameObject();
-            scale.transform.SetParent(camera.transform);
+            scale.transform.SetParent(camera.transform, false);
             scale.transform.localScale = new Vector3(0.3f, 0.3f, 0.4f);
 
             var quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            UnityEngine.Object.Destroy(quad.GetComponent<Rigidbody>()); // probably not needed but Debug log suggests it's there
+            UnityEngine.Object.Destroy(quad.GetComponent<Collider>());
             quad.name = "ui_quad";
-            quad.transform.SetParent(scale.transform);
-            quad.transform.Translate(2 * Vector3.forward);
+            quad.layer = 29;
+            quad.transform.SetParent(scale.transform, false);
+            quad.transform.Translate(0.8f * Vector3.forward);
             quad.transform.localScale = 3 * Vector3.one;
 
             return quad;

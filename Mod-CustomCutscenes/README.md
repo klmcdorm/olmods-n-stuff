@@ -40,7 +40,7 @@ This also means that all objects shown in the cutscene should be on these layers
 
 ##### UI Quad
 
-Cutscene text is rendered to a texture which is then displayed in the cutscene. If you want to match the built-in cutscenes, place a Quad relative to the Camera using the following transformations in order:
+Cutscene text is rendered to a texture which is then displayed in the cutscene. If you want to match the built-in cutscenes, set the Camera's field of view to 37, then place a Quad relative to the Camera using the following transformations in order:
 * Scale by (0.3, 0.3, 0.4)
 * Translate by (0, 0, 2)
 * Scale by (3, 3, 3)
